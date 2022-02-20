@@ -1,0 +1,33 @@
+<mat-stepper labelPosition="bottom">
+  <mat-step label="step 1" state="phone">
+    <div>
+      <p>第一步</p>
+      <button mat-button matStepperNext>下一步</button>
+    </div>
+  </mat-step>
+  <mat-step label="step 2" state="chat">
+    <div>
+      <p>第二步</p>
+      <button mat-button matStepperPrevious>上一步</button><button mat-button matStepperNext>下一步</button>
+    </div>
+  </mat-step>
+  <mat-step label="step 3">
+    <div>
+      <p>第三步</p>
+      <button mat-button matStepperPrevious>上一步</button>
+    </div>
+  </mat-step>
+
+  <ng-template matStepperIcon="phone">
+    <mat-icon>keyboard_voice</mat-icon>
+  </ng-template>
+  <ng-template matStepperIcon="chat">
+    <mat-icon>headphones</mat-icon>
+  </ng-template>
+
+  <ng-template matStepperIcon="done" let-index="index">
+    <mat-icon color="primary">{{lst[index]}}</mat-icon>
+  </ng-template>
+
+
+</mat-stepper>
